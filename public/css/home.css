@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    /* color: #cadbda; */
+    color: rgb(54, 54, 54);
+
+}
+.conteinerheader{
+    position:fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.tabs{
+    display: flex;
+    padding: 0.75rem;
+    background:  linear-gradient(to right ,#ff416c,#ff4b2b);;
+    border-radius: 99px;
+    box-shadow: 0 0 5px rgba(224, 24, 24, 0.15), 0 6px 12px 0 rgba(244, 24, 24, 0.15);
+}
+.tabs *{
+    z-index: 2;
+}
+input[type="radio"]{
+    display: none;
+}
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 200px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 99px;
+    transition: color 0.15s ease-in;
+}
+input[type="radio"]:checked+label{
+    color: #de8971;
+}
+input[id ="radio1"]:checked ~ .glider{
+    transform: translateX(0);
+}
+input[id ="radio2"]:checked ~ .glider{
+    transform: translateX(100%);
+}
+input[id ="radio3"]:checked ~ .glider{
+    transform: translateX(200%);
+}
+input[id ="radio4"]:checked ~ .glider{
+    transform: translateX(300%);
+}
+.glider{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    height: 54px;
+    width: 200px;
+    background-color: rgb(58, 57, 57);
+    /* background-color: black; */
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+@media (max-width:700px){
+    .tabs{
+        transform:scale(0.6);
+    }
+}
+a{
+    text-decoration: none;
+    color: #ffff;
+
+}
