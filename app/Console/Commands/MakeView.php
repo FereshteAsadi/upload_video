@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use File;
 use Illuminate\Support\Facades\File as FacadesFile;
 
 class MakeView extends Command
